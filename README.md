@@ -28,7 +28,7 @@ Recursos protegidos:
   
   $ pip install -r requirements.txt
   
-  $ docker run --name mysql -p 3306:3306 -v /home//mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -d mysql
+  $ docker run --name mysql -p 3306:3306 -v /home/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -d mysql
   
   $ docker exec -it mysql /bin/bash
   

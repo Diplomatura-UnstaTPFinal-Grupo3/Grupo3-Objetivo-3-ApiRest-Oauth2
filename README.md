@@ -44,5 +44,26 @@ Recursos protegidos:
   
  ```
   
+  USO:
+  ---
   
+  Login Page:
+  ---
+  ![image](https://user-images.githubusercontent.com/87378901/146185106-6537b7bf-1d91-4805-9d44-39298786557a.png)
+  
+  Create client page:
+  ---
+  ![image](https://user-images.githubusercontent.com/87378901/146186412-e89918c1-a7b9-46d4-a4da-8cafd336a816.png)
+  
+  Client info:
+  ---
+  ![image](https://user-images.githubusercontent.com/87378901/146186481-3d15835a-798f-40c1-8120-98ac2537e3d9.png)
+  
+  
+Test:
+---
+Se exporto la collection de POSTMAN con los test:
+Collection Name: Test- Rest API.json
+
+
   

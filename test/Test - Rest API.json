@@ -1,0 +1,644 @@
+{
+	"info": {
+		"_postman_id": "5cbc7ffe-c40f-4524-a0e9-8c1e8f92f0ef",
+		"name": "Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/oauth2/token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "xKdHYGQDHNfK9U9BVtKHTjZ0ZDUA0B3unlZtg4hebH4NfIYa",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "3kvcY8Bty1Gb9OIdNw1zMPSZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "usuario",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "cursos",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/oauth2/token",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"oauth2",
+						"token"
+					]
+				},
+				"description": "Request token bearer"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:5000/oauth2/token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "usuario",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "cursos",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/oauth2/token",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "196"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.9.7"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:39:56 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"YSM7x2VMkEGvKbqeA2nlEn2a1UK037On0NPl0Ss5Uh\",\n    \"expires_in\": 864000,\n    \"refresh_token\": \"rhQZuH43Sjo6YpD7DWa79g1xCiXxNKYz2vxduwNkgEkU0JvX\",\n    \"scope\": \"cursos\",\n    \"token_type\": \"Bearer\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:5000/Course",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "YSM7x2VMkEGvKbqeA2nlEn2a1UK037On0NPl0Ss5Uh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/Course",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"Course"
+					]
+				},
+				"description": "Get course with auth"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:5000/Course",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/Course",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"Course"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1094"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.9.7"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:42:04 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Courses\": [\n        {\n            \"created_at\": \"Tue, 19 Jan 2038 03:14:07 GMT\",\n            \"finish_at\": \"Tue, 16 Mar 2021 00:00:00 GMT\",\n            \"hours\": 45,\n            \"id\": 1,\n            \"name\": \"Test curso\",\n            \"start_at\": \"Tue, 14 Dec 2021 00:00:00 GMT\"\n        },\n        {\n            \"created_at\": \"Tue, 19 Jan 2038 03:14:07 GMT\",\n            \"finish_at\": \"Wed, 16 Mar 2022 00:00:00 GMT\",\n            \"hours\": 20,\n            \"id\": 2,\n            \"name\": \"Test Curso 2\",\n            \"start_at\": \"Thu, 13 Jan 2022 00:00:00 GMT\"\n        },\n        {\n            \"created_at\": \"Tue, 14 Dec 2021 03:52:39 GMT\",\n            \"finish_at\": \"Tue, 01 Jun 2021 00:00:00 GMT\",\n            \"hours\": 53,\n            \"id\": 3,\n            \"name\": \"Test curso from post\",\n            \"start_at\": \"Fri, 01 Apr 2022 00:00:00 GMT\"\n        },\n        {\n            \"created_at\": \"Tue, 14 Dec 2021 03:53:17 GMT\",\n            \"finish_at\": \"Tue, 01 Jun 2021 00:00:00 GMT\",\n            \"hours\": 53,\n            \"id\": 4,\n            \"name\": \"Test curso from post 2\",\n            \"start_at\": \"Fri, 01 Apr 2022 00:00:00 GMT\"\n        },\n        {\n            \"created_at\": \"Tue, 14 Dec 2021 03:54:04 GMT\",\n            \"finish_at\": \"Tue, 01 Jun 2021 00:00:00 GMT\",\n            \"hours\": 53,\n            \"id\": 6,\n            \"name\": \"Test curso from post 3\",\n            \"start_at\": \"Fri, 01 Apr 2022 00:00:00 GMT\"\n        },\n        {\n            \"created_at\": \"Tue, 14 Dec 2021 03:56:27 GMT\",\n            \"finish_at\": \"Tue, 01 Jun 2021 00:00:00 GMT\",\n            \"hours\": 53,\n            \"id\": 7,\n            \"name\": \"Test curso from post 6\",\n            \"start_at\": \"Fri, 01 Apr 2022 00:00:00 GMT\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:5000/Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/Course",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"Course"
+					]
+				},
+				"description": "Requests without auth"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:5000/Course",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/Course",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"Course"
+							]
+						}
+					},
+					"status": "UNAUTHORIZED",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.9.7"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:43:21 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"missing_authorization\",\n    \"error_description\": \"Missing \\\"Authorization\\\" in headers.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:5000/Course",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "YSM7x2VMkEGvKbqeA2nlEn2a1UK037On0NPl0Ss5Uh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"finish_at\": \"2022-02-25\",\n    \"hours\": 15,\n    \"name\": \"Test curso Final\",\n    \"start_at\": \"2021-12-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/Course",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"Course"
+					]
+				},
+				"description": "Create Course"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:5000/Course",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"finish_at\": \"2022-02-25\",\n    \"hours\": 15,\n    \"name\": \"Test curso Final\",\n    \"start_at\": \"2021-12-30\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/Course",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"Course"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "190"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.9.7"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:45:57 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Course\": {\n        \"created_at\": \"Wed, 15 Dec 2021 12:45:57 GMT\",\n        \"finish_at\": \"Fri, 25 Feb 2022 00:00:00 GMT\",\n        \"hours\": 15,\n        \"id\": 10,\n        \"name\": \"Test curso Final\",\n        \"start_at\": \"Thu, 30 Dec 2021 00:00:00 GMT\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:5000/Course/10",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "YSM7x2VMkEGvKbqeA2nlEn2a1UK037On0NPl0Ss5Uh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"name\": \"Test curso Final modified\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/Course/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"Course",
+						"10"
+					]
+				},
+				"description": "Modifiy course by id"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:5000/Course/10",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"name\": \"Test curso Final modified\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/Course/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"Course",
+								"10"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.9.7"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:48:05 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Course\": \"course not Found\"\n}"
+				},
+				{
+					"name": "http://127.0.0.1:5000/Course/6",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"name\": \"Test curso Final modified 2\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/Course/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"Course",
+								"6"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "200"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.9.7"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 13:06:19 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Course\": {\n        \"created_at\": \"Tue, 14 Dec 2021 03:54:04 GMT\",\n        \"finish_at\": \"Tue, 01 Jun 2021 00:00:00 GMT\",\n        \"hours\": 53,\n        \"id\": 6,\n        \"name\": \"Test curso Final modified 2\",\n        \"start_at\": \"Fri, 01 Apr 2022 00:00:00 GMT\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:5000/Course/10",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "YSM7x2VMkEGvKbqeA2nlEn2a1UK037On0NPl0Ss5Uh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/Course/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"Course",
+						"10"
+					]
+				},
+				"description": "Delete course by id"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:5000/Course/10",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/Course/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"Course",
+								"10"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.9.7"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:49:19 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Course\": \"deleted\"\n}"
+				}
+			]
+		}
+	]
+}

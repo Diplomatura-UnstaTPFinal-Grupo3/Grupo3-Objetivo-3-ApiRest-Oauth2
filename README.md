@@ -24,13 +24,24 @@ Recursos protegidos:
 
 #Instalacion:
  ```
-  > clone git@github.com:Diplomatura-UnstaTPFinal-Grupo3/Objetivo-3.git
+  $ clone git@github.com:Diplomatura-UnstaTPFinal-Grupo3/Objetivo-3.git
   
-  > pip install -r requirements.txt
+  $ pip install -r requirements.txt
   
-  > docker run --name mysql -p 3306:3306 -v /home//mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -d mysql
+  $ docker run --name mysql -p 3306:3306 -v /home//mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -d mysql
   
-  > flask run
+  $ docker exec -it mysql /bin/bash
+  
+  # mysql -u root -p
+  
+  >CREATE DATABASE tp_apirest;
+  
+  >exit
+  
+  #exit
+  
+  $ flask run
+  
  ```
   
   
